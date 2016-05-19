@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/guest/myprogs/resh/z4/format.cpp
+sstream
+-
+iomanip
+-
+format.h
+/home/guest/myprogs/resh/z4/format.h
+
+/home/guest/myprogs/resh/z4/format.h
+string
+-
+stdexcept
+-
+vector
+-
+

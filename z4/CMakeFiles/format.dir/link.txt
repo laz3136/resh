@@ -1,0 +1,2 @@
+/usr/bin/ar cr libformat.a  CMakeFiles/format.dir/format.o
+/usr/bin/ranlib libformat.a
