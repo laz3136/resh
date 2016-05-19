@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/guest/myprogs/resh/z3/rational.cpp
+rational.h
+/home/guest/myprogs/resh/z3/rational.h
+
+/home/guest/myprogs/resh/z3/rational.h
+
