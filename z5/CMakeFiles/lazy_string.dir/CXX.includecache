@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/guest/myprogs/resh/z5/lazy_string.cpp
+lazy_string.h
+/home/guest/myprogs/resh/z5/lazy_string.h
+iostream
+-
+stdexcept
+-
+
+/home/guest/myprogs/resh/z5/lazy_string.h
+string
+-
+istream
+-
+ostream
+-
+

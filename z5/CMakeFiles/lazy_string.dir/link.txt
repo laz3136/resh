@@ -1,0 +1,2 @@
+/usr/bin/ar cr liblazy_string.a  CMakeFiles/lazy_string.dir/lazy_string.o
+/usr/bin/ranlib liblazy_string.a
