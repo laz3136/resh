@@ -1,2 +1,1 @@
-/home/guest/myprogs/resh/z4/CMakeFiles/Test.dir
 /home/guest/myprogs/resh/z4/CMakeFiles/format.dir

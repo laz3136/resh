@@ -7,18 +7,22 @@
 #IncludeRegexTransform: 
 
 /home/guest/myprogs/resh/z4/format.cpp
-sstream
--
-iomanip
--
 format.h
 /home/guest/myprogs/resh/z4/format.h
 
 /home/guest/myprogs/resh/z4/format.h
 string
 -
+sstream
+-
 stdexcept
 -
-vector
+cstddef
+-
+iomanip
+-
+cstdio
+-
+typeinfo
 -
 

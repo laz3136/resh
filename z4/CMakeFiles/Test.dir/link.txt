@@ -1,1 +1,0 @@
-/usr/bin/c++    -std=c++11    CMakeFiles/Test.dir/main.o  -o Test -rdynamic libformat.a 

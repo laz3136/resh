@@ -1,2 +1,1 @@
-/usr/bin/ar cr libformat.a  CMakeFiles/format.dir/format.o
-/usr/bin/ranlib libformat.a
+/usr/bin/c++  -fPIC  -std=c++11   -shared -Wl,-soname,libformat.so -o libformat.so CMakeFiles/format.dir/format.o 

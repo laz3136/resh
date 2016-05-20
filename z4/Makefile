@@ -140,19 +140,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Test
-
-# Build rule for target.
-Test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Test
-.PHONY : Test
-
-# fast build rule for target.
-Test/fast:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
-.PHONY : Test/fast
-
-#=============================================================================
 # Target rules for targets named format
 
 # Build rule for target.
@@ -180,28 +167,12 @@ format.s:
 	$(MAKE) -f CMakeFiles/format.dir/build.make CMakeFiles/format.dir/format.s
 .PHONY : format.s
 
-# target to build an object file
-main.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.o
-.PHONY : main.o
-
-# target to preprocess a source file
-main.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.i
-.PHONY : main.i
-
-# target to generate assembly for a file
-main.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.s
-.PHONY : main.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Test"
 	@echo "... edit_cache"
 	@echo "... format"
 	@echo "... install"
@@ -212,9 +183,6 @@ help:
 	@echo "... format.o"
 	@echo "... format.i"
 	@echo "... format.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 

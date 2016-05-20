@@ -1,7 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/format.dir/format.o"
   "libformat.pdb"
-  "libformat.a"
+  "libformat.so"
 )
 
 # Per-language clean rules from dependency scanning.
