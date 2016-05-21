@@ -1,3 +1,3 @@
-/home/guest/myprogs/resh/z5/lib/liblazy_string.a
-/home/guest/myprogs/resh/z5/include/lazy_string.h
-/home/guest/myprogs/resh/z5/include/lazy_string.cpp
+/home/guest/myprogs/resh/task5/lib/liblazy_string.a
+/home/guest/myprogs/resh/task5/include/lazy_string.h
+/home/guest/myprogs/resh/task5/include/lazy_string.cpp

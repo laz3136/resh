@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/guest/myprogs/resh/z4/format.cpp
+/home/guest/myprogs/resh/task4/format.cpp
 format.h
-/home/guest/myprogs/resh/z4/format.h
+/home/guest/myprogs/resh/task4/format.h
 
-/home/guest/myprogs/resh/z4/format.h
+/home/guest/myprogs/resh/task4/format.h
 string
 -
 sstream

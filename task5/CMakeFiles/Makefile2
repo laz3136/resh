@@ -47,10 +47,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/z5
+CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/task5
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guest/myprogs/resh/z5
+CMAKE_BINARY_DIR = /home/guest/myprogs/resh/task5
 
 #=============================================================================
 # Target rules for target CMakeFiles/lazy_string.dir
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/guest/myprogs/resh/z5
 CMakeFiles/lazy_string.dir/all:
 	$(MAKE) -f CMakeFiles/lazy_string.dir/build.make CMakeFiles/lazy_string.dir/depend
 	$(MAKE) -f CMakeFiles/lazy_string.dir/build.make CMakeFiles/lazy_string.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/z5/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/task5/CMakeFiles  1
 	@echo "Built target lazy_string"
 .PHONY : CMakeFiles/lazy_string.dir/all
 
@@ -69,9 +69,9 @@ all: CMakeFiles/lazy_string.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lazy_string.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guest/myprogs/resh/z5/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guest/myprogs/resh/task5/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lazy_string.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/guest/myprogs/resh/z5/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/guest/myprogs/resh/task5/CMakeFiles 0
 .PHONY : CMakeFiles/lazy_string.dir/rule
 
 # Convenience name for target.

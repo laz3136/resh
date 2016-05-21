@@ -1,8 +1,8 @@
-# Install script for directory: /home/guest/myprogs/resh/z5
+# Install script for directory: /home/guest/myprogs/resh/task5
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/home/guest/myprogs/resh/z5")
+  SET(CMAKE_INSTALL_PREFIX "/home/guest/myprogs/resh/task5")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,38 +34,38 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/guest/myprogs/resh/z5/lib/liblazy_string.a")
+   "/home/guest/myprogs/resh/task5/lib/liblazy_string.a")
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/home/guest/myprogs/resh/z5/lib" TYPE STATIC_LIBRARY FILES "/home/guest/myprogs/resh/z5/liblazy_string.a")
+FILE(INSTALL DESTINATION "/home/guest/myprogs/resh/task5/lib" TYPE STATIC_LIBRARY FILES "/home/guest/myprogs/resh/task5/liblazy_string.a")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/guest/myprogs/resh/z5/include/lazy_string.h")
+   "/home/guest/myprogs/resh/task5/include/lazy_string.h")
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/home/guest/myprogs/resh/z5/include" TYPE FILE FILES "/home/guest/myprogs/resh/z5/lazy_string.h")
+FILE(INSTALL DESTINATION "/home/guest/myprogs/resh/task5/include" TYPE FILE FILES "/home/guest/myprogs/resh/task5/lazy_string.h")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/guest/myprogs/resh/z5/include/lazy_string.cpp")
+   "/home/guest/myprogs/resh/task5/include/lazy_string.cpp")
   IF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
   IF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   ENDIF (CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-FILE(INSTALL DESTINATION "/home/guest/myprogs/resh/z5/include" TYPE FILE FILES "/home/guest/myprogs/resh/z5/lazy_string.cpp")
+FILE(INSTALL DESTINATION "/home/guest/myprogs/resh/task5/include" TYPE FILE FILES "/home/guest/myprogs/resh/task5/lazy_string.cpp")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(CMAKE_INSTALL_COMPONENT)
@@ -74,7 +74,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/home/guest/myprogs/resh/z5/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/guest/myprogs/resh/task5/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/home/guest/myprogs/resh/z5/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/guest/myprogs/resh/task5/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

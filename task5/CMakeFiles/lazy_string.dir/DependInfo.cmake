@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/guest/myprogs/resh/z5/lazy_string.cpp" "/home/guest/myprogs/resh/z5/CMakeFiles/lazy_string.dir/lazy_string.o"
+  "/home/guest/myprogs/resh/task5/lazy_string.cpp" "/home/guest/myprogs/resh/task5/CMakeFiles/lazy_string.dir/lazy_string.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,2 +1,2 @@
-/home/guest/myprogs/resh/z3/include/rational.h
-/home/guest/myprogs/resh/z3/lib/librational.so
+/home/guest/myprogs/resh/task3/include/rational.h
+/home/guest/myprogs/resh/task3/lib/librational.so

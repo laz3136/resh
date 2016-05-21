@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/z3
+CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/task3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guest/myprogs/resh/z3
+CMAKE_BINARY_DIR = /home/guest/myprogs/resh/task3
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rational.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/rational.dir/flags.make
 
 CMakeFiles/rational.dir/rational.o: CMakeFiles/rational.dir/flags.make
 CMakeFiles/rational.dir/rational.o: rational.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/z3/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/task3/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/rational.dir/rational.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rational.dir/rational.o -c /home/guest/myprogs/resh/z3/rational.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/rational.dir/rational.o -c /home/guest/myprogs/resh/task3/rational.cpp
 
 CMakeFiles/rational.dir/rational.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/rational.dir/rational.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/guest/myprogs/resh/z3/rational.cpp > CMakeFiles/rational.dir/rational.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/guest/myprogs/resh/task3/rational.cpp > CMakeFiles/rational.dir/rational.i
 
 CMakeFiles/rational.dir/rational.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/rational.dir/rational.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/guest/myprogs/resh/z3/rational.cpp -o CMakeFiles/rational.dir/rational.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/guest/myprogs/resh/task3/rational.cpp -o CMakeFiles/rational.dir/rational.s
 
 CMakeFiles/rational.dir/rational.o.requires:
 .PHONY : CMakeFiles/rational.dir/rational.o.requires
@@ -97,6 +97,6 @@ CMakeFiles/rational.dir/clean:
 .PHONY : CMakeFiles/rational.dir/clean
 
 CMakeFiles/rational.dir/depend:
-	cd /home/guest/myprogs/resh/z3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guest/myprogs/resh/z3 /home/guest/myprogs/resh/z3 /home/guest/myprogs/resh/z3 /home/guest/myprogs/resh/z3 /home/guest/myprogs/resh/z3/CMakeFiles/rational.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/guest/myprogs/resh/task3 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guest/myprogs/resh/task3 /home/guest/myprogs/resh/task3 /home/guest/myprogs/resh/task3 /home/guest/myprogs/resh/task3 /home/guest/myprogs/resh/task3/CMakeFiles/rational.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/rational.dir/depend
 

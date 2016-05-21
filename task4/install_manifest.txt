@@ -1,2 +1,2 @@
-/home/guest/myprogs/resh/z4/lib/libformat.so
-/home/guest/myprogs/resh/z4/include/format.h
+/home/guest/myprogs/resh/task4/lib/libformat.so
+/home/guest/myprogs/resh/task4/include/format.h

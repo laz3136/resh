@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/guest/myprogs/resh/z4/format.cpp" "/home/guest/myprogs/resh/z4/CMakeFiles/format.dir/format.o"
+  "/home/guest/myprogs/resh/task4/format.cpp" "/home/guest/myprogs/resh/task4/CMakeFiles/format.dir/format.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

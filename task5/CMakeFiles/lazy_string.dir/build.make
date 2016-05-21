@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/z5
+CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/task5
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guest/myprogs/resh/z5
+CMAKE_BINARY_DIR = /home/guest/myprogs/resh/task5
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lazy_string.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/lazy_string.dir/flags.make
 
 CMakeFiles/lazy_string.dir/lazy_string.o: CMakeFiles/lazy_string.dir/flags.make
 CMakeFiles/lazy_string.dir/lazy_string.o: lazy_string.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/z5/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/task5/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/lazy_string.dir/lazy_string.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/lazy_string.dir/lazy_string.o -c /home/guest/myprogs/resh/z5/lazy_string.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/lazy_string.dir/lazy_string.o -c /home/guest/myprogs/resh/task5/lazy_string.cpp
 
 CMakeFiles/lazy_string.dir/lazy_string.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lazy_string.dir/lazy_string.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/guest/myprogs/resh/z5/lazy_string.cpp > CMakeFiles/lazy_string.dir/lazy_string.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/guest/myprogs/resh/task5/lazy_string.cpp > CMakeFiles/lazy_string.dir/lazy_string.i
 
 CMakeFiles/lazy_string.dir/lazy_string.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lazy_string.dir/lazy_string.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/guest/myprogs/resh/z5/lazy_string.cpp -o CMakeFiles/lazy_string.dir/lazy_string.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/guest/myprogs/resh/task5/lazy_string.cpp -o CMakeFiles/lazy_string.dir/lazy_string.s
 
 CMakeFiles/lazy_string.dir/lazy_string.o.requires:
 .PHONY : CMakeFiles/lazy_string.dir/lazy_string.o.requires
@@ -98,6 +98,6 @@ CMakeFiles/lazy_string.dir/clean:
 .PHONY : CMakeFiles/lazy_string.dir/clean
 
 CMakeFiles/lazy_string.dir/depend:
-	cd /home/guest/myprogs/resh/z5 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guest/myprogs/resh/z5 /home/guest/myprogs/resh/z5 /home/guest/myprogs/resh/z5 /home/guest/myprogs/resh/z5 /home/guest/myprogs/resh/z5/CMakeFiles/lazy_string.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/guest/myprogs/resh/task5 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guest/myprogs/resh/task5 /home/guest/myprogs/resh/task5 /home/guest/myprogs/resh/task5 /home/guest/myprogs/resh/task5 /home/guest/myprogs/resh/task5/CMakeFiles/lazy_string.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lazy_string.dir/depend
 

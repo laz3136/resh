@@ -1,1 +1,1 @@
-/home/guest/myprogs/resh/z4/CMakeFiles/format.dir
+/home/guest/myprogs/resh/task4/CMakeFiles/format.dir

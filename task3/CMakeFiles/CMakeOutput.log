@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/guest/myprogs/resh/z3/CMakeFiles/2.8.10.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/guest/myprogs/resh/task3/CMakeFiles/2.8.10.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,35 +23,35 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/guest/myprogs/resh/z3/CMakeFiles/2.8.10.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/guest/myprogs/resh/task3/CMakeFiles/2.8.10.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp
+Change Dir: /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec365801626/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec365801626.dir/build.make CMakeFiles/cmTryCompileExec365801626.dir/build
-gmake[1]: Вход в каталог `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec365801626.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec365801626.dir/testCCompiler.c.o   -c /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec365801626
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec365801626.dir/link.txt --verbose=1
-/usr/bin/cc         CMakeFiles/cmTryCompileExec365801626.dir/testCCompiler.c.o  -o cmTryCompileExec365801626 -rdynamic 
-gmake[1]: Выход из каталога `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3779155648/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3779155648.dir/build.make CMakeFiles/cmTryCompileExec3779155648.dir/build
+gmake[1]: Вход в каталог `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3779155648.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3779155648.dir/testCCompiler.c.o   -c /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec3779155648
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3779155648.dir/link.txt --verbose=1
+/usr/bin/cc         CMakeFiles/cmTryCompileExec3779155648.dir/testCCompiler.c.o  -o cmTryCompileExec3779155648 -rdynamic 
+gmake[1]: Выход из каталога `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp
+Change Dir: /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec4015055109/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4015055109.dir/build.make CMakeFiles/cmTryCompileExec4015055109.dir/build
-gmake[1]: Вход в каталог `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o   -c /usr/share/CMake/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec4015055109
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4015055109.dir/link.txt --verbose=1
-/usr/bin/cc       -v CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec4015055109 -rdynamic  
+Run Build Command:/usr/bin/gmake "cmTryCompileExec2054426425/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2054426425.dir/build.make CMakeFiles/cmTryCompileExec2054426425.dir/build
+gmake[1]: Вход в каталог `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o   -c /usr/share/CMake/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec2054426425
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2054426425.dir/link.txt --verbose=1
+/usr/bin/cc       -v CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2054426425 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=i586-alt-linux-gcc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i586-alt-linux/4.7.2/lto-wrapper
@@ -61,24 +61,24 @@ Thread model: posix
 gcc version 4.7.2 20121109 (ALT Linux 4.7.2-alt7) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/:/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/
 LIBRARY_PATH=/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/4.7.2/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4015055109' '-rdynamic' '-mtune=generic' '-march=i586'
- /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec4015055109 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s -lc -lgcc --as-needed -lgcc_s /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o
-gmake[1]: Выход из каталога `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2054426425' '-rdynamic' '-mtune=generic' '-march=i586'
+ /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec2054426425 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s -lc -lgcc --as-needed -lgcc_s /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o
+gmake[1]: Выход из каталога `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec4015055109/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4015055109.dir/build.make CMakeFiles/cmTryCompileExec4015055109.dir/build]
-  ignore line: [gmake[1]: Вход в каталог `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o   -c /usr/share/CMake/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec4015055109]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4015055109.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec4015055109 -rdynamic  ]
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec2054426425/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec2054426425.dir/build.make CMakeFiles/cmTryCompileExec2054426425.dir/build]
+  ignore line: [gmake[1]: Вход в каталог `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o   -c /usr/share/CMake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec2054426425]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2054426425.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc       -v CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2054426425 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=i586-alt-linux-gcc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i586-alt-linux/4.7.2/lto-wrapper]
@@ -88,8 +88,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.7.2 20121109 (ALT Linux 4.7.2-alt7) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/:/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/4.7.2/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec4015055109' '-rdynamic' '-mtune=generic' '-march=i586']
-  link line: [ /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec4015055109 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s -lc -lgcc --as-needed -lgcc_s /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2054426425' '-rdynamic' '-mtune=generic' '-march=i586']
+  link line: [ /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec2054426425 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s -lc -lgcc --as-needed -lgcc_s /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o]
     arg [/usr/libexec/gcc/i586-alt-linux/4.7.2/collect2] ==> ignore
     arg [--as-needed] ==> ignore
     arg [--build-id] ==> ignore
@@ -101,14 +101,14 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib/ld-linux.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec4015055109] ==> ignore
+    arg [cmTryCompileExec2054426425] ==> ignore
     arg [-zrelro] ==> ignore
     arg [/usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o] ==> ignore
     arg [/usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o] ==> ignore
     arg [/usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o] ==> ignore
     arg [-L/usr/lib/gcc/i586-alt-linux/4.7.2] ==> dir [/usr/lib/gcc/i586-alt-linux/4.7.2]
     arg [-L/usr/lib/gcc/i586-alt-linux/4.7.2/../../..] ==> dir [/usr/lib/gcc/i586-alt-linux/4.7.2/../../..]
-    arg [CMakeFiles/cmTryCompileExec4015055109.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec2054426425.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -129,32 +129,32 @@ Parsed C implicit link information from above output:
 
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp
+Change Dir: /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec4059931921/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec4059931921.dir/build.make CMakeFiles/cmTryCompileExec4059931921.dir/build
-gmake[1]: Вход в каталог `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec4059931921.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec4059931921.dir/testCXXCompiler.cxx.o -c /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec4059931921
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4059931921.dir/link.txt --verbose=1
-/usr/bin/c++          CMakeFiles/cmTryCompileExec4059931921.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec4059931921 -rdynamic 
-gmake[1]: Выход из каталога `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/gmake "cmTryCompileExec97071546/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec97071546.dir/build.make CMakeFiles/cmTryCompileExec97071546.dir/build
+gmake[1]: Вход в каталог `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec97071546.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec97071546.dir/testCXXCompiler.cxx.o -c /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec97071546
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec97071546.dir/link.txt --verbose=1
+/usr/bin/c++          CMakeFiles/cmTryCompileExec97071546.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec97071546 -rdynamic 
+gmake[1]: Выход из каталога `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp
+Change Dir: /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/gmake "cmTryCompileExec1556308822/fast"
-/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1556308822.dir/build.make CMakeFiles/cmTryCompileExec1556308822.dir/build
-gmake[1]: Вход в каталог `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/CMake/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec1556308822
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1556308822.dir/link.txt --verbose=1
-/usr/bin/c++        -v CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1556308822 -rdynamic  
+Run Build Command:/usr/bin/gmake "cmTryCompileExec3483990018/fast"
+/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3483990018.dir/build.make CMakeFiles/cmTryCompileExec3483990018.dir/build
+gmake[1]: Вход в каталог `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/CMake/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec3483990018
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3483990018.dir/link.txt --verbose=1
+/usr/bin/c++        -v CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3483990018 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=i586-alt-linux-g++
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i586-alt-linux/4.7.2/lto-wrapper
@@ -164,24 +164,24 @@ Thread model: posix
 gcc version 4.7.2 20121109 (ALT Linux 4.7.2-alt7) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/:/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/
 LIBRARY_PATH=/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/4.7.2/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1556308822' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i586'
- /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec1556308822 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o
-gmake[1]: Выход из каталога `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3483990018' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i586'
+ /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec3483990018 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o
+gmake[1]: Выход из каталога `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec1556308822/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec1556308822.dir/build.make CMakeFiles/cmTryCompileExec1556308822.dir/build]
-  ignore line: [gmake[1]: Вход в каталог `/home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp']
-  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/z3/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/CMake/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec1556308822]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1556308822.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1556308822 -rdynamic  ]
+  ignore line: [Run Build Command:/usr/bin/gmake "cmTryCompileExec3483990018/fast"]
+  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTryCompileExec3483990018.dir/build.make CMakeFiles/cmTryCompileExec3483990018.dir/build]
+  ignore line: [gmake[1]: Вход в каталог `/home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp']
+  ignore line: [/usr/bin/cmake -E cmake_progress_report /home/guest/myprogs/resh/task3/CMakeFiles/CMakeTmp/CMakeFiles 1]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/CMake/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec3483990018]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3483990018.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++        -v CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3483990018 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=i586-alt-linux-g++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/i586-alt-linux/4.7.2/lto-wrapper]
@@ -191,8 +191,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.7.2 20121109 (ALT Linux 4.7.2-alt7) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/4.7.2/:/usr/libexec/gcc/i586-alt-linux/:/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/i586-alt-linux/4.7.2/:/usr/lib/gcc/i586-alt-linux/4.7.2/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1556308822' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i586']
-  link line: [ /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec1556308822 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3483990018' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=i586']
+  link line: [ /usr/libexec/gcc/i586-alt-linux/4.7.2/collect2 --as-needed --build-id --eh-frame-hdr --hash-style=gnu -m elf_i386 -export-dynamic -dynamic-linker /lib/ld-linux.so.2 -o cmTryCompileExec3483990018 -z relro /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o /usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o -L/usr/lib/gcc/i586-alt-linux/4.7.2 -L/usr/lib/gcc/i586-alt-linux/4.7.2/../../.. CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/i586-alt-linux/4.7.2/crtend.o /usr/lib/gcc/i586-alt-linux/4.7.2/../../../crtn.o]
     arg [/usr/libexec/gcc/i586-alt-linux/4.7.2/collect2] ==> ignore
     arg [--as-needed] ==> ignore
     arg [--build-id] ==> ignore
@@ -204,14 +204,14 @@ Parsed CXX implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib/ld-linux.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec1556308822] ==> ignore
+    arg [cmTryCompileExec3483990018] ==> ignore
     arg [-zrelro] ==> ignore
     arg [/usr/lib/gcc/i586-alt-linux/4.7.2/../../../crt1.o] ==> ignore
     arg [/usr/lib/gcc/i586-alt-linux/4.7.2/../../../crti.o] ==> ignore
     arg [/usr/lib/gcc/i586-alt-linux/4.7.2/crtbegin.o] ==> ignore
     arg [-L/usr/lib/gcc/i586-alt-linux/4.7.2] ==> dir [/usr/lib/gcc/i586-alt-linux/4.7.2]
     arg [-L/usr/lib/gcc/i586-alt-linux/4.7.2/../../..] ==> dir [/usr/lib/gcc/i586-alt-linux/4.7.2/../../..]
-    arg [CMakeFiles/cmTryCompileExec1556308822.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec3483990018.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]

@@ -35,10 +35,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/z4
+CMAKE_SOURCE_DIR = /home/guest/myprogs/resh/task4
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/guest/myprogs/resh/z4
+CMAKE_BINARY_DIR = /home/guest/myprogs/resh/task4
 
 # Include any dependencies generated for this target.
 include CMakeFiles/format.dir/depend.make
@@ -51,17 +51,17 @@ include CMakeFiles/format.dir/flags.make
 
 CMakeFiles/format.dir/format.o: CMakeFiles/format.dir/flags.make
 CMakeFiles/format.dir/format.o: format.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/z4/CMakeFiles $(CMAKE_PROGRESS_1)
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/guest/myprogs/resh/task4/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/format.dir/format.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/format.dir/format.o -c /home/guest/myprogs/resh/z4/format.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/format.dir/format.o -c /home/guest/myprogs/resh/task4/format.cpp
 
 CMakeFiles/format.dir/format.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/format.dir/format.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/guest/myprogs/resh/z4/format.cpp > CMakeFiles/format.dir/format.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/guest/myprogs/resh/task4/format.cpp > CMakeFiles/format.dir/format.i
 
 CMakeFiles/format.dir/format.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/format.dir/format.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/guest/myprogs/resh/z4/format.cpp -o CMakeFiles/format.dir/format.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/guest/myprogs/resh/task4/format.cpp -o CMakeFiles/format.dir/format.s
 
 CMakeFiles/format.dir/format.o.requires:
 .PHONY : CMakeFiles/format.dir/format.o.requires
@@ -97,6 +97,6 @@ CMakeFiles/format.dir/clean:
 .PHONY : CMakeFiles/format.dir/clean
 
 CMakeFiles/format.dir/depend:
-	cd /home/guest/myprogs/resh/z4 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guest/myprogs/resh/z4 /home/guest/myprogs/resh/z4 /home/guest/myprogs/resh/z4 /home/guest/myprogs/resh/z4 /home/guest/myprogs/resh/z4/CMakeFiles/format.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/guest/myprogs/resh/task4 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/guest/myprogs/resh/task4 /home/guest/myprogs/resh/task4 /home/guest/myprogs/resh/task4 /home/guest/myprogs/resh/task4 /home/guest/myprogs/resh/task4/CMakeFiles/format.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/format.dir/depend
 
