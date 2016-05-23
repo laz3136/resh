@@ -1,1 +1,0 @@
-/home/guest/myprogs/resh/task5/CMakeFiles/lazy_string.dir
