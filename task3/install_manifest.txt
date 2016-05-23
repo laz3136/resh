@@ -1,2 +1,0 @@
-/home/guest/myprogs/resh/task3/include/rational.h
-/home/guest/myprogs/resh/task3/lib/librational.so
