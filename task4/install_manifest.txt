@@ -1,2 +1,0 @@
-/home/guest/myprogs/resh/task4/lib/libformat.so
-/home/guest/myprogs/resh/task4/include/format.h
