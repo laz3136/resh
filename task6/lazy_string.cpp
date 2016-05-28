@@ -41,7 +41,7 @@ lazy_string lazy_string::substr(size_t pos, size_t count) {
 const char &lazy_string::at(size_t pos) const {
     if (pos >= size_str)
         throw std::out_of_range("lazy_string(method at): great value for the position");
-    return str[first + pos];
+    return this->str[pos];
 }
 
 const char &lazy_string::operator[](size_t pos) const {
