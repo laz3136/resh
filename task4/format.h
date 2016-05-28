@@ -1,346 +1,230 @@
-#ifndef IFMO_CPP_FORMAT_H
-#define IFMO_CPP_FORMAT_H
+#ifndef MY_FORMAT_FORMAT_H
+#define MY_FORMAT_FORMAT_H
 
-#include <cstddef>
-#include <sstream>
+
+#include <string>
 #include <stdexcept>
-
-namespace Format
-{
-    enum class Flag { none = 0, minus = 1 << 0,     // As BitMask
-                                plus  = 1 << 1,
-                                space = 1 << 2,
-                                zero  = 1 << 3,
-                                sharp = 1 << 4 };
-    enum class Width { none, number, asterisk };
-    enum class Precision { none, number, asterisk };
-    enum class Length { none, hh, h, l, ll, L, z, j, t, unknown };
-    enum class Type { none, percent, d, i, u, f, F, e, E, g, G, x, X, o, s, c, p, a, A, n, unknown };
-
-    inline constexpr Flag operator|(Flag l, Flag r)
-    {
-        return static_cast<Flag>(static_cast<int>(l) | static_cast<int>(r));
-    }
-    inline constexpr Flag operator&(Flag l, Flag r)
-    {
-        return static_cast<Flag>(static_cast<int>(l) & static_cast<int>(r));
-    }
-    inline constexpr Flag operator~(Flag c)
-    {
-        return static_cast<Flag>(~static_cast<int>(c));
-    }
-    inline constexpr Flag operator!(Flag c)
-    {
-        return static_cast<Flag>(!static_cast<int>(c));
-    }
-
-    inline Flag &operator|=(Flag &l, Flag r) { l = l | r; return l; }
-    inline Flag &operator&=(Flag &l, Flag r) { l = l & r; return l; }
-
-    class Token
-    {
-    public:
-        Type type = Type::none;
-        Flag flag = Flag::none;
-        Width width = Width::none;
-        Precision precision = Precision::none;
-        Length length = Length::none;
-        std::string before = "", after = "";
-        int width_value = -1, precision_value = -1;
-    };
-
-    class Tokenizer
-    {
-    private:
-        std::string format;
-        int position;
-
-        /**
-         * Parses a text until `%` symbol from the format string.
-         * 
-         * @return A matched text
-         */
-        std::string accumulate();
-    public:
-        /**
-         * Creates a new tokenizer with specified format string.
-         */
-        Tokenizer(const std::string &format);
-
-        /**
-         * Parses a next token in the format string and returns it.
-         * 
-         * @return A token
-         */
-        Token* next();
-    };
+#include <iostream>
 
 
-    class Formatter
-    {
-    private:
-        std::string format;
-        Tokenizer *tokenizer;
 
-        template<typename To, typename From>
-        typename std::enable_if<std::is_convertible<From, To>::value, To>::type
-        cast(From value)
-        {
-            return static_cast<To>(value);
-        }
+template<typename ...Args>
+std::string format(const std::string &formatString, const Args &... args);
 
-        template<typename To, typename From>
-        typename std::enable_if<!std::is_convertible<From, To>::value, To>::type
-        cast(From value)
-        {
-            throw std::invalid_argument("Invalid argument type");
-        }
+//enum contains allowed format specifiers
+enum Format {
+    def = '\0',
 
-        template <typename First>
-        std::string format_number(Token* token, std::string type, First first, std::string length) {
-            std::string t = "%";
-            if (static_cast<bool>(token->flag & Flag::minus)) t.append("-");
-            if (static_cast<bool>(token->flag & Flag::plus)) t.append("+");
-            if (static_cast<bool>(token->flag & Flag::space)) t.append(" ");
-            if (static_cast<bool>(token->flag & Flag::zero)) t.append("0");
-            if (static_cast<bool>(token->flag & Flag::sharp)) t.append("#");
-            if (token->width_value >= 0) t.append(std::to_string(token->width_value));
-            if (token->precision_value >= 0) t.append("." + std::to_string(token->precision_value));
-            t.append(length);
-            t.append(type);
-
-            int len = snprintf(NULL, 0, t.c_str(), first);
-            char buff[len + 2]; // Long buffer not for snprintf, i want w/o it
-            snprintf(buff, sizeof(buff), t.c_str(), first);
-            return std::string(buff);
-        }
-
-        /**
-         * Takes arguments and formats them according to the format string. 
-         * 
-         * @param   result  Accumulating result string
-         * @param   token   Token with format data
-         *
-         * @return  Formatted string
-         */
-        std::string apply(std::string& result, Token* token);
-
-        /**
-         * Takes arguments and formats them according to the format string. 
-         * 
-         * @param   result  Accumulating result string
-         * @param   token   Token with format data
-         * @param   first   Arguments to format
-         * @param   rest    Arguments to format
-         *
-         * @return  Formatted string
-         */
-        template <typename First, typename... Rest>
-        std::string apply(std::string& result, Token* token, First& first, 
-                          Rest&... rest)
-        {
-            if (token == NULL || token->type == Type::none)
-                return result;
-
-            // ADDITIONAL ARGUMENTS
-
-            if (token->width == Width::asterisk) {
-                token->width = Width::number;
-                token->width_value = cast<int>(first);
-                return apply(result, token, rest...);
-            }
-
-            if (token->precision == Precision::asterisk) {
-                token->precision = Precision::number;
-                token->precision_value = cast<int>(first);
-                return apply(result, token, rest...);
-            }
-
-            // FORMAT OPTIONS
-
-            std::ostringstream token_result;
-
-            if (token->width == Width::number)
-            {
-                if (token->width_value < 0)
-                {
-                    token->width_value *= -1;
-                    token->flag |= Flag::minus;
-                    token->flag &= ~Flag::zero;
-                }
-
-                token_result.width(token->width_value);
-            }
-
-            if (token->precision == Precision::number)
-            {
-                if (token->precision_value < 0)
-                    throw std::invalid_argument(
-                        "Precision specifier cannot be negative");
-            }
-
-            if (static_cast<bool>(token->flag & Flag::minus))
-                token_result << std::left;
-
-            // TYPES MATCHING
-
-            std::string type = "";
-            switch (token->type)
-            {
-                case Type::percent:
-                    token_result << '%';
-                    break;
-                case Type::d: if (token->type == Type::d) type = "d";
-                case Type::i: if (token->type == Type::i) type = "i";
-                    switch (token->length)
-                    {
-                        case Length::none: token_result << format_number(token, type, cast<int>          (first), ""  ); break;
-                        case Length::hh:   token_result << format_number(token, type, cast<signed char>  (first), "hh"); break;
-                        case Length::h:    token_result << format_number(token, type, cast<short int>    (first), "h" ); break;
-                        case Length::l:    token_result << format_number(token, type, cast<long int>     (first), "l" ); break;
-                        case Length::ll:   token_result << format_number(token, type, cast<long long int>(first), "ll"); break;
-                        case Length::z:    token_result << format_number(token, type, cast<size_t>       (first), "z" ); break;
-                        case Length::j:    token_result << format_number(token, type, cast<intmax_t>     (first), "j" ); break;
-                        case Length::t:    token_result << format_number(token, type, cast<ptrdiff_t>    (first), "t" ); break;
-                        default: throw std::invalid_argument("Length specifier is not supported");
-                    }
-                    break;
-                case Type::X: if (token->type == Type::X) type = "X";
-                case Type::u: if (token->type == Type::u) type = "u";
-                case Type::o: if (token->type == Type::o) type = "o";
-                case Type::x: if (token->type == Type::x) type = "x";
-                    switch (token->length)
-                    {
-                        case Length::none: token_result << format_number(token, type, cast<unsigned int>          (first), ""  ); break;
-                        case Length::hh:   token_result << format_number(token, type, cast<unsigned char>         (first), "hh"); break;
-                        case Length::h:    token_result << format_number(token, type, cast<unsigned short int>    (first), "h" ); break;
-                        case Length::l:    token_result << format_number(token, type, cast<unsigned long int>     (first), "l" ); break;
-                        case Length::ll:   token_result << format_number(token, type, cast<unsigned long long int>(first), "ll"); break;
-                        case Length::z:    token_result << format_number(token, type, cast<size_t>                (first), "z" ); break;
-                        case Length::j:    token_result << format_number(token, type, cast<uintmax_t>             (first), "j" ); break;
-                        case Length::t:    token_result << format_number(token, type, cast<ptrdiff_t>             (first), "t" ); break;
-                        default: throw std::invalid_argument("Length specifier is not supported");
-                    }
-                    break;
-                case Type::F: if (token->type == Type::F) type = "F";
-                case Type::E: if (token->type == Type::E) type = "E";
-                case Type::G: if (token->type == Type::G) type = "G";
-                case Type::A: if (token->type == Type::A) type = "A";
-                case Type::f: if (token->type == Type::f) type = "f";
-                case Type::e: if (token->type == Type::e) type = "e";
-                case Type::g: if (token->type == Type::g) type = "g";
-                case Type::a: if (token->type == Type::a) type = "a";
-                    switch (token->length)
-                    {
-                        case Length::none: token_result << format_number(token, type, cast<double>     (first), ""); break;
-                        case Length::L:    token_result << format_number(token, type, cast<long double>(first), "L"); break;
-                        default: throw std::invalid_argument("Length specifier is not supported");
-                    }
-                    break;
-                case Type::s:
-                    if (token->length == Length::none)
-                    {
-                        std::string s = cast<std::string>(first);
-
-                        if (token->precision == Precision::number)
-                            token_result << s.substr(0, token->precision_value);
-                        else
-                            token_result << s;
-                    }
-                    else if (token->length == Length::l)
-                    {
-                        // WIDE STRING VERY HARD
-                    }
-                    else
-                    {
-                        throw std::invalid_argument("Length specifier is not supported");
-                    }
-
-                    break;
-                case Type::c:
-                    switch (token->length)
-                    {
-                        case Length::none: token_result << cast<char>        (first); break;
-                        case Length::l:    token_result << cast<std::wint_t> (first); break;
-                        default: throw std::invalid_argument("Length specifier is not supported");
-                    }
-                    break;
-                case Type::p: 
-                    if (token->length != Length::none)
-                        throw std::invalid_argument("Unsupported length specifier");
-                    if (cast<void*>(first) != NULL)
-                        token_result << cast<void*>(first);
-                    else
-                        token_result << "(nil)";
-                    break;
-                case Type::n:
-                    switch (token->length)
-                    {
-                        case Length::none: *(cast<int*>           (first)) = result.length(); break;
-                        case Length::hh:   *(cast<signed char*>   (first)) = result.length(); break;
-                        case Length::h:    *(cast<short int*>     (first)) = result.length(); break;
-                        case Length::l:    *(cast<long int*>      (first)) = result.length(); break;
-                        case Length::ll:   *(cast<long long int*> (first)) = result.length(); break;
-                        case Length::z:    *(cast<size_t*>        (first)) = result.length(); break;
-                        case Length::j:    *(cast<intmax_t*>      (first)) = result.length(); break;
-                        case Length::t:    *(cast<ptrdiff_t*>     (first)) = result.length(); break;
-                        default: throw std::invalid_argument("Length specifier is not supported");
-                    }
-                    break;
-                default:
-                    throw std::invalid_argument("Type specifier is not supported");
-            }
-
-            result.append(token->before);
-            result.append(token_result.str());
-            result.append(token->after);
-
-            if (token->type == Type::percent)
-                return apply(result, this->tokenizer->next(), first, rest...);
-            else
-                return apply(result, this->tokenizer->next(), rest...);
-        }
-
-    public:
-        Formatter(const std::string &format);
-
-        /**
-         * Takes arguments and formats them according to the format string. 
-         * 
-         * @param   args    Arguments to format
-         *
-         * @return  Formatted string
-         */
-        template <typename... Args>
-        std::string apply(Args... args)
-        {
-            std::string result = "";
-            return apply(result, this->tokenizer->next(), args...);
-        }
-    };
+    d = 'd',
+    i = 'i',
+    u = 'u',
+    o = 'o',
+    x = 'x',
+    X = 'X',
+    f = 'f',
+    F = 'F',
+    e = 'e',
+    E = 'E',
+    g = 'g',
+    G = 'G',
+    a = 'a',
+    A = 'A',
+    c = 'c',
+    s = 's',
+    p = 'p',
+    n = 'n',
 };
 
 
-/**
- * Returns a formatted string according to the format string.
- *
- * @param   fmt     Format string
- * @param   args    Arguments, accroding to the specifiers in the format string.
- *                  If more arguments provided, than needed, the extra arguments
- *                  are ignored.
- *
- * @return  Formatted string
- *
- * @throws  std::invalid_argument If a format string contains an unexpected 
- *                                specifier, an argument can not be converted to 
- *                                required format, or other errors
- * @throws  std::out_of_range     If there are not enough arguments
+
+std::string get_format(const std::string &fmt, size_t &index, bool &width_arg, bool &precision_arg,
+                       Format &f);
+
+
+// Replace '*' literal with needed wp value
+std::string replace_format(const std::string &fmt, int &wp);
+
+
+/*
+ * Templates for type checking
  */
-template <typename... Args> std::string format(const std::string& format,
-                                               Args... args)
-{
-    Format::Formatter formatter(format);
-    return formatter.apply(args...);
+
+// String check, throws std::invalid_argument if string was not found
+template<typename T>
+bool check_type(Format format, T variable,
+                typename std::enable_if<(std::is_convertible<T, std::string>::value), std::string>::type * = 0) {
+    if (format == p || format == s) return true;
+    else throw std::invalid_argument("String was not found");
+
 }
 
-#endif // IFMO_CPP_FORMAT_H
+
+//Checks ptr type
+template<typename T>
+bool check_type(Format format, T variable, typename std::enable_if<(!(std::is_convertible<T, std::string>::value) &&
+                                         (std::is_pointer<T>::value)), std::string>::type * = 0) {
+    return (format == p);
+}
+
+//Checks numerical types, throws std::invalid_argument
+template<typename T>
+bool check_type(Format format, T variable, typename std::enable_if<
+        !(std::is_convertible<T, std::string>::value) && !(std::is_pointer<T>::value), std::string>::type * = 0) {
+    if (!std::is_convertible<T, int>::value) throw std::invalid_argument("Invalid argument");
+
+    if (format == d || format == i || format == u || format == o || format == x || format == X || format == f ||
+        format == F || format == e || format == E || format == g || format == G || format == a || format == A ||
+        format == c) {
+        return true;
+    }
+
+    throw std::invalid_argument("Invalid argument");
+}
+
+// Formats arguments and returns it, throws std::invalid_argument
+template<typename T>
+std::string get_format_string(T &arg, Format &format, std::string &format_str,
+                              typename std::enable_if<std::is_same<T, std::string>::value ||
+                                                      std::is_same<T, const std::string>::value>::type * = 0) {
+    char *arg_c = const_cast<char *>(arg.c_str());
+    if (!check_type(format, arg_c)) {
+        throw std::invalid_argument("Format : invalid type of  argument");
+    }
+    std::string result((size_t) snprintf(NULL, 0, const_cast<char *>(format_str.c_str()), arg_c), '\0');
+    snprintf(const_cast<char *>(result.c_str()), result.length() + 1, const_cast<char *>(format_str.c_str()),
+             arg_c);
+    return result;
+}
+
+// Formats arguments and returns it, throws std::invalid_argument (for other types)
+template<typename T>
+std::string get_format_string(T &arg, Format &format, std::string &format_str, typename std::enable_if<
+        !std::is_same<T, std::string>::value && !std::is_same<T, const std::string>::value>::type * = 0) {
+    if (!check_type(format, arg)) {
+        throw std::invalid_argument("Format : invalid type of  argument");
+    }
+    std::string result((size_t) snprintf(NULL, 0, const_cast<char *>(format_str.c_str()), arg), '\0');
+    snprintf(const_cast<char *>(result.c_str()), result.length() + 1, const_cast<char *>(format_str.c_str()), arg);
+    return result;
+}
+
+
+/*
+ * Argument to int convertion functions
+ */
+template<typename T>
+int read_int(T &arg, typename std::enable_if<std::is_integral<T>::value>::type * = 0) {
+    return (int) arg;
+}
+
+template<typename T>
+int read_int(T &arg, typename std::enable_if<!std::is_integral<T>::value>::type * = 0) {
+    throw std::invalid_argument(std::string("Invalid argument, expected integral type"));
+}
+
+/*
+ * Following functions return formatted arguments according requested output format
+ * Throw std::out_of_range exception if number of arguments is not equals to expected one
+ */
+template<typename T1, typename T2, typename T3, typename ...Args>
+std::string format_3_args(std::string &formatSpec, Format &format, T1 &width, T2 &precision, T3 &arg,
+                          Args &... rest) {
+    int width_val = read_int(width);
+    formatSpec = replace_format(formatSpec, width_val);
+    int precision_val = read_int(precision);
+    formatSpec = replace_format(formatSpec, precision_val);
+    return get_format_string(arg, format, formatSpec);
+};
+
+template<typename ...Args>
+std::string format_3_args(std::string &formatSpec, Format &f, Args &... rest) {
+    throw std::out_of_range("Not enough arguments");
+}
+
+template<typename T1, typename T2, typename ...Args>
+std::string format_2_args(std::string &formatSpec, Format &format, T1 &ws, T2 &arg, Args &... rest) {
+    int val = read_int(ws);
+    formatSpec = replace_format(formatSpec, val);
+    return get_format_string(arg, format, formatSpec);
+};
+
+template<typename ...Args>
+std::string format_2_args(std::string &formatSpec, Format &f, Args &... rest) {
+    throw std::out_of_range("Not enough arguments");
+}
+
+template<typename T, typename ...Args>
+std::string format_arg(std::string &formatSpec, Format &format, T &arg, Args &... rest) {
+    return get_format_string(arg, format, formatSpec);
+};
+
+template<typename ...Args>
+std::string format_arg(std::string &formatSpec, Format &f, Args &... rest) {
+    throw std::out_of_range("Not enough arguments");
+}
+
+
+// Parses the rest of format string
+template<typename ...Args>
+std::string sprint(const std::string &fmt, int &count_of_args, size_t &index, Args &... rest) {
+    if (index < fmt.length()) {
+        std::string formatSpec, result = "";
+        bool width_arg = false, precision_arg = false;
+        Format format = def;
+        do {
+            formatSpec = get_format(fmt, index, width_arg, precision_arg, format);
+            if (formatSpec[0] != '%') {
+                result += formatSpec;
+            } else if (formatSpec == "%") {
+                result += formatSpec;
+            } else {
+                throw std::out_of_range("Format : not enough arguments");
+            }
+        } while (index < fmt.length());
+        return result;
+    }
+    return "";
+}
+// Read format, read the required number of arguments and formatted it
+template<typename T, typename ...Args>
+std::string sprint(const std::string &fmt, int &count_of_extraArgs, size_t &index, T &head, Args &... rest) {
+    if (count_of_extraArgs > 0) {
+        return sprint(fmt, --count_of_extraArgs, index, rest...);
+    }
+    size_t len = fmt.length();
+    std::string formatSpec;
+    while (index < len) {
+        bool width_arg = false, precision_arg = false;
+        Format format = def;
+        std::string temp;
+        do {
+            formatSpec = get_format(fmt, index, width_arg, precision_arg, format);
+            temp += formatSpec;
+        } while (formatSpec == "%" || formatSpec[0] != '%');
+
+        formatSpec = temp;
+        count_of_extraArgs = width_arg + precision_arg;
+        std::string result;
+        result = count_of_extraArgs == 0 ? format_arg(formatSpec, format, head, rest...) :
+                 (count_of_extraArgs == 1 ? format_2_args(formatSpec, format, head, rest...) :
+                  format_3_args(formatSpec, format, head, rest...));
+        return result + sprint(fmt, count_of_extraArgs, index, rest...);
+    }
+    throw std::invalid_argument("Empty format or extra args");
+}
+
+
+/**
+ * Returns string, formatted according to format specifiers
+ * Throws std::out_of_range exception if number of argument is more or less than expected
+ * Throws std::invalid_argument exception if format string has some illegal specifiers
+ */
+template<typename ...Args>
+std::string format(const std::string &formatString, const Args &... args) {
+    int count_of_args = 0;
+    size_t index = 0;
+    return sprint(formatString, count_of_args, index, args...);
+}
+
+
+#endif //MY_FORMAT_FORMAT_H
