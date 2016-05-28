@@ -1,3 +1,9 @@
+/**
+ * Nariman Safiulin (woofilee)
+ * File: format.cpp
+ * Created on: May 06, 2016
+ */
+
 #include <stdexcept>
 #include "format.h"
 
